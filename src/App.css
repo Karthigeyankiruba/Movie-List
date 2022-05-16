@@ -1,0 +1,87 @@
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+} */
+
+body{
+ font-family: Roboto;
+}
+.pro-pic {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.btn-like,.btn-dislike{
+  font-size: 1rem;
+}
+.btn-like{
+  margin-right: 0.5rem;
+}
+
+.user-container{
+padding: 2rem;
+}
+
+.add-color{
+  display: flex;
+}
+.movie-specs{
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
+}
+
+.movie-container{
+  /* background-color: rgb(57, 49, 49); */
+  width:340px;
+  height: min-content;
+
+}
+
+.movie-poster{
+  width:340px;
+  height:500px;
+  object-fit: cover;
+}
+
+.movie-name{
+  font-size: 24px;
+  margin:0;
+}
+
+.movie-summary{
+  margin-top:0;
+}
+
+.movie-rating{
+  font-size: 18px;
+}
+
+.movie-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap:16px;
+}
+
+.not-found{
+  width: 100%;
+  max-height: 700px;
+  object-fit: contain;
+}
+
+.movie-detail-container{
+  max-width: 700px;
+}
+
+.add-movie-form{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-bar{
+  margin-bottom: 10px;
+}
