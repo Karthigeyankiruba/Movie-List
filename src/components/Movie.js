@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Card, CardContent,CardActions } from "@mui/material";
-export function Movie({ movie, id,deleteButton,editButton }) {
+export function Movie({ movie, id }) {
   const styles = {
     color: movie.rating > 8 ? "green" : "red",
   };
@@ -51,7 +51,7 @@ export function Movie({ movie, id,deleteButton,editButton }) {
       {show ? <p className="movie-summary">{movie.summary}</p> : ""}
       </CardContent>
       <CardActions>
-      <Counter /> {deleteButton} {editButton}
+      <Counter />
       </CardActions>
     </Card>
   );

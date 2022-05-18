@@ -1,22 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
-import { useEffect, useState } from "react";
-import { API } from "./global";
 
-export function MovieDetails() {
+export function MovieDetails({ movieList }) {
 
   const { id } = useParams();
-  const [movie,setMovie] = useState({});
-  // const [movieList, setMovieList] = useState([]);
-
-  useEffect(()=> {
-    fetch(`${API}/movies/${id}`)
-    .then(data => data.json())
-    .then((mv)=>setMovie(mv));
-  },[id]);
- 
- 
+  const movie = movieList[id];
   const navigate = useNavigate();
   const styles = {
     color: movie.rating > 8 ? "green" : "red",

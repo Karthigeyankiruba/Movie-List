@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 // hook is fuction=starts with use
@@ -8,13 +8,9 @@ import Badge from '@mui/material/Badge';
 // setState-informs React to update
 export function Counter() {
   const [like, setLike] = useState(0);
-  const [disLike, setDisLike] = useState(0);
+  const [dislike, setDisLike] = useState(0);
   const incrementLike= () => setLike(like + 1);
-  const incrementDisLike= () => setDisLike(disLike + 1);
-
-  useEffect(() => {
-    console.log("like value :" , like);
-  },[like,disLike] );
+  const incrementDisLike= () => setDisLike(dislike + 1);
 
   return (
     <div>
@@ -23,8 +19,8 @@ export function Counter() {
   👍
 </Badge>
 </IconButton>
-<IconButton onClick={incrementDisLike} color="primary" aria-label="disLike">
- <Badge badgeContent={disLike} color="error">
+<IconButton onClick={incrementDisLike} color="primary" aria-label="dislike">
+ <Badge badgeContent={dislike} color="error">
  👎
 </Badge>
 </IconButton>
